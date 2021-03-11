@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Node",
+      "type": "node",
+      "request": "attach",
+      "port": 7001,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/",
+      "sourceMapPathOverrides": {
+        "<WORKDIR>/*": "${workspaceRoot}/*"
+      }
+    },
+    {
+      "name": "Mocha Tests",
+      "request": "launch",
+      "type": "pwa-node",
+      "stopOnEntry": false,
+      "runtimeExecutable": null,
+      "args": [
+        "-u",
+        "tdd",
+        "--timeout",
+        "999999",
+        "--colors",
+        "--require", "ts-node/register",
+        "${workspaceFolder}/src/tests/**/*.ts"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+    }
+  ]
+}

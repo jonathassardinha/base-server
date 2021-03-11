@@ -1,0 +1,21 @@
+{
+  "dbConfig": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "database",
+    "user": "username",
+    "password": "password",
+    "connectionLimit": 5,
+    "dialect": "mysql"
+  },
+  "jwtConfig": {
+    "algorithm": "RS256",
+    "audience": "https://audience.com/api",
+    "tokenExpiration": 300,
+    "tokenPrivateKeyEnvName": "PRIVATE_JWT_KEY",
+    "tokenPublicKeyEnvName": "PUBLIC_JWT_KEY",
+    "refreshTokenExpiration": 8640,
+    "refreshTokenPrivateKeyEnvName": "PRIVATE_REFRESH_JWT_KEY"
+  },
+  "serverPort": 8080
+}
